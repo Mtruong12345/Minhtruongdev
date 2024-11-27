@@ -1,250 +1,564 @@
 <!DOCTYPE html>
-<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-    <head>
-        <meta charSet='utf-8'/>
-        <meta content='//minhtruongdev.blogspot.com' property='og:url'/>
-        <meta content='Trang chủ của minhtruongdev.blogspot.com - Welome to the website.' name='description'/>
-        <meta content='MinhTruong' name='author'/>
-        <meta content='mtruong, Minhtruong, Minhtruong dev, wusteam, converted by minh truong' name='keywords'/>
-        <meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'/>
-        <link href='https://dev.htpn.vn/upload/291215605_556554882669296_2531839889044700321_n.jpg' rel='shortcut icon' type='image/x-icon'/>
-        <meta content='website' property='og:type'/>
-        <meta content='Welcome to TTTT' property='og:title'/>
-        <meta content='13' name='next-head-count'/>
-        <title>MinhTruong | Thông Tin Thanh Toán</title>
-        <link crossorigin='true' href='https://fonts.googleapis.com' rel='preconnect'/>
-        <link crossorigin='true' href='https://fonts.gstatic.com' rel='preconnect'/>
-        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' rel='stylesheet'/>
-        <script src='https://code.jquery.c>om/jquery-3.7.1.min.js'/>
-        <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'/>
-        <b:skin><![CDATA[
-    <!-- Font và thư viện CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="ThanhDieuTV">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="shortcut icon" href="//thanhdieu.com/thanhdieuft-data/img/logo.jpg" type="image/x-icon">
+    <title>Website Has Been Hacker By Wussun Team</title>
+  </head>
+  <body>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            flex-direction: column;
+      @charset "utf-8";
+      @import url('https://fonts.googleapis.com/css?family=Rowdies|Monomaniac+One|ZCOOL+QingKe+HuangYou|Concert One&display=swap');
+      :root {
+        --theme-skin: #505050;
+        --theme-skin-matching: #F9D938;
+        --infor_bar_bgcolor: rgba(255, 255, 255, 0.6);
+        --style_menu_selection_radius: 10px;
+        --post_list_matching_color: #FCCD00;
+        --style_menu_radius: 10px;
+        --post-list-thumb: #e8e8e8;
+        --friend-link-shadow: #e8e8e8;
+        --friend-link-title: #ac354b;
+        --comment_area_matching: #6667ab;
+        --comment_area_shadow: #e8e8e8;
+        --shuoshuo_background_color1: rgba(255, 224, 102, 0.2);
+        --shuoshuo_background_color2: rgba(255, 204, 0, 0.2);
+        --inline_code_background_color: #F2F1F1;
+        --theme-skin-dark: #FCCD00;
+        --global-font-weight: 300;
+        --theme-dm-background_transparency: 0.8;
+        --exhibition_area_matching_color: #a0daa9;
+        --inline_code_background_color_in_dark_mode: #505050;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        transition: background 0.8s;
+        cursor: url(//files.catbox.moe/gcs4qx.cur), auto;
+      }
+
+      body {
+        margin: 0;
+        font: 300 17px;
+        text-shadow: 0 0 1px rgba(0, 0, 0, .1);
+        color: #505050;
+        font-size: 15px;
+        line-height: 1.5;
+        background: #0000;
+        background-attachment: fixed;
+        background-position: center;
+        scrollbar-width: 6px;
+        font-weight: var(--global-font-weight);
+        user-select: none;
+        filter: blur(10px);
+        animation: blur 1.8s forwards; /
+      } 
+    @keyframes blur {
+    0% {
+        filter: blur(7px); 
+    }
+    100% {
+        filter: blur(0);
+    }
+}    .marquee {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    margin:1px;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #00ff00;
+}
+.marquee p {
+    white-space: nowrap;
+    margin: 0;
+    color:green;
+    font-size: 24px;
+    font-family: Monomaniac One;
+    font-weight: 700;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+      a {
+        background-color: transparent;
+        text-decoration: none;
+        color: var(--theme-skin-matching, #F9D938);
+        outline: 0;
+        -webkit-transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out;
+        -moz-transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out;
+        transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out;
+        word-break: break-word;
+      }
+      hr {
+        box-sizing: content-box;
+        height: 1px
+          /*!covered0*/
+        ;
+        background-color: #ccc;
+        border: 0;
+        margin-bottom: 1.5em;
+      }
+      .top-feature li {
+        width: 260px;
+        height: 160px;
+        float: left;
+        margin: 6px 7px 0px 7px;
+        position: relative;
+        display: block;
+        border-radius: 15px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+      }
+
+      .foverlay-bg {
+        position: absolute;
+        width: 100%;
+        height: 160px;
+        text-align: center;
+        line-height: 160px;
+        color: #fff;
+        font-size: 32px;
+        opacity: 0;
+        border-radius: 10px;
+        background: linear-gradient(to right, #02111D80, #02111D10, #02111D80)
+          /*!covered#02111D10,-webkit-linear-gradient(to right, #02111D80, #02111D20, #02111D80)*/
+        ;
+        font-weight: var(--global-font-weight);
+      }
+
+      .feature-title .foverlay {
+        color: #fff;
+        font-size: 32px;
+        height: 110px;
+        text-align: center;
+        border-radius: 10px;
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        -webkit-transform: translateY(calc(70px + 1em));
+        transform: translateY(calc(70px + 1em));
+        -webkit-transition: -webkit-transform .3s;
+        transition: transform .3s, -webkit-transform .3s
+          /*!covered-webkit-transform .3s,transform .3s*/
+        ;
+        font-weight: var(--global-font-weight);
+      }
+
+      .foverlay {
+        -moz-transition: opacity .4s ease-out;
+        -o-transition: opacity .4s ease-out;
+        -webkit-transition: opacity .4s ease-out;
+        transition: opacity .4s ease-out;
+      }
+
+      .notice i {
+        float: left;
+        color: #999;
+        font-size: 18px;
+        padding-right: 15px;
+        padding-left: 5px;
+        font-weight: var(--global-font-weight);
+      }
+
+      .headertop::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background-attachment: fixed;
+      }
+
+      #centerbg {
+        width: 100%;
+        height: 550px;
+        margin: 0;
+        padding: 0;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        z-index: -1;
+      }
+
+      .focusinfo {
+        position: relative;
+        max-width: 800px;
+        padding: 0 10px;
+        top: 49.3%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 5;
+        -webkit-transition: .4s ease all;
+        -moz-transition: .4s ease all;
+        -o-transition: .4s ease all;
+        transition: .4s ease all;
+      }
+
+      .focusinfo img {
+        width: 175px;
+        height: 175px;
+        border-radius: 100%;
+        animation: neon 1s infinite;
+      }
+      .focusinfo .header-ws img {
+    object-fit: cover;
+    opacity: 1;
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transition: all 0.8s ease !important;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    -o-transition: all ease 1s;
+    animation: NeonShake 0.2s infinite;
+}
+
+@keyframes NeonShake {
+    0% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+        transform: translateX(0);
+    }
+    25%, 75% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 30px #00ff00;
+        transform: translateX(-5px);
+    }
+    50% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+        transform: translateX(5px);
+    }
+    100% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+        transform: translateX(0);
+    }
+}
+      .focusinfo .header-ws img:hover {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+      }
+
+      .bio-text {
+        position: relative;
+        width: auto;
+        font-size: 40px;
+        height: 40px;
+        top: 50%;
+        font-weight: var(--global-font-weight);
+      }
+
+      .bio-text .word {
+        position: absolute;
+        opacity: 0;
+        white-space: nowrap;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      .bio-text .letter {
+        display: inline-block;
+        position: relative;
+        -webkit-transform: translateZ(25px);
+        transform: translateZ(25px);
+        -webkit-transform-origin: 50% 50% 25px;
+        transform-origin: 50% 50% 25px;
+      }
+
+      .bio-text .letter.out {
+        -webkit-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        -webkit-transition: -webkit-transform .32s cubic-bezier(.55, .055, .675, .19);
+        transition: transform .32s cubic-bezier(.55, .055, .675, .19), -webkit-transform .32s cubic-bezier(.55, .055, .675, .19)
+          /*!covered-webkit-transform .32s cubic-bezier(.55, .055, .675, .19),transform .32s cubic-bezier(.55, .055, .675, .19)*/
+        ;
+      }
+
+      .bio-text .letter.in {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+        -webkit-transition: -webkit-transform .5s cubic-bezier(.175, .885, .32, 1.275);
+        transition: transform .5s cubic-bezier(.175, .885, .32, 1.275), -webkit-transform .5s cubic-bezier(.175, .885, .32, 1.275)
+          /*!covered-webkit-transform .5s cubic-bezier(.175, .885, .32, 1.275),transform .5s cubic-bezier(.175, .885, .32, 1.275)*/
+        ;
+      }
+
+      .header-container {
+        display: grid;
+      }
+
+      .header-info {
+        width: 65%;
+        margin: auto;
+        font-size: 16px;
+        color:#00ff00;
+        background: var(--infor_bar_bgcolor, rgba(255, 255, 255, 0.8));
+        padding: 15px;
+        margin-top: 22px;
+        letter-spacing: 0;
+        line-height: 30px;
+        border-radius: 15px;
+        border: 1px solid var(--infor_bar_bgcolor, rgba(255, 255, 255, 0.8));
+        box-sizing: initial;
+        white-space: nowrap;
+        font-weight: var(--global-font-weight);
+        backdrop-filter: blur(10px);
+        transition: all 0.8s ease !important;
+        animation: neon 1s infinite;
+        }   
+        @keyframes neon {
+      0% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+      }
+      50% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 30px #00ff00;
+      }
+      100% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+      }
+    }
+
+      .header-info p {
+        margin: 0;
+        font-size: 16px;
+        font-family: Rowdies;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 700;
+        white-space: nowrap;
+        transition: all 0.8s ease !important;
+        animation: blink1 0.1s infinite;
+      }
+      @keyframes blink1 {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+      .top-social {
+        height: 30px;
+        margin-top: 28px;
+        list-style: none;
+        display: inline-block;
+      }
+
+      .top-social img {
+        height: 36px;
+        width: 40px;
+        padding: 8px 10px;
+        border: 0.5px solid var(--infor_bar_bgcolor, rgba(255, 255, 255, 0.8));
+        background: var(--infor_bar_bgcolor, rgba(255, 255, 255, 0.9));
+        transition: all 0.8s ease !important;
+      }
+
+      .top-social img:hover {
+        box-shadow: 0 1px 6px 3px #e8e8e8;
+        background: rgba(255, 255, 255, 0.95);
+        transition: all 0.8s ease !important;
+      }
+
+      .top-social_v2 {
+        height: 32px;
+        margin-bottom: -15px;
+        list-style: none;
+        display: inline-block;
+      }
+
+      .top-social_v2 img {
+        height: 35px;
+        width: 35px;
+        padding: 6px;
+        background: 0 0;
+      }
+
+      .headertop-down {
+        position: absolute;
+        bottom: 40px;
+        left: calc(50% - 42px);
+        z-index: 5;
+        animation-name: float-down;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      .headertop-down svg path {
+        transition: all 0.8s ease !important;
+      }
+      @media only screen and (max-width: 768px) {
+    .headertop-down {
+        display: none;
+    }
+}
+
+      @keyframes float-down {
+        0% {
+          transform: translateY(0px);
         }
-        .MinhTruong_Avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+        50% {
+          transform: translateY(-7px);
         }
-        h2, h4 {
-            margin: 10px 0;
+
+        100% {
+          transform: translateY(0px);
         }
-        .buttons___ {
-            margin: 20px 0;
-        }
-        button {
-            margin: 10px;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .facebook {
-            background-color: #1877f2;
-            color: #ffffff;
-        }
-        .youtube {
-            background-color: #ff0000;
-            color: #ffffff;
-        }
-        .Descriptions____ {
-            margin: 20px 0;
-        }
-        .cardsContainer__ {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-        }
-        .infoCard__ {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            width: 250px;
-        }
-        .infoCard__ img {
-            margin-bottom: 10px;
-        }
+      }
+      .avatar {
+        border-radius: 100% !important;
+        -webkit-border-radius: 100% !important;
+        -moz-border-radius: 100% !important;
+        box-shadow: inset 0 -1px 0 #333333;
+        -webkit-box-shadow: inset 0 -1px 0 #333333;
+        transition: transform 0.4s ease-out;
+        -webkit-transition: -webkit-transform 0.4s ease-out;
+        -moz-transition: -moz-transform 0.4s ease-out;
+      }
+      img {
+        border: 0;
+        height: auto;
+        max-width: 100%;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      
+      .site-main {
+        padding: 7.5% 0 0;
+      }
+      .top-social li {
+        float: left;
+        margin: 0px 5px;
+      }
+
+      .top-social_v2 li {
+        float: left;
+        margin: 0px 6px;
+      }
+
+      .site-header.iconsearch:hover {
+        cursor: pointer;
+        color: #999;
+      }
+      h1 {
+      color: #00ff00;
+      font-size: 32px;
+      font-family: Concert One;
+      margin-bottom: 20px;
+      text-align: center;
+      animation: glitch 2s infinite;
+    }
+    
+    @keyframes glitch {
+      0% {
+        transform: translate(2px, 2px);
+        text-shadow: -1px -1px #ff00ff;
+      }
+      25% {
+        transform: translate(-2px, -2px);
+        text-shadow: 2px -1px #00ffff;
+      }
+      50% {
+        transform: translate(2px, -2px);
+        text-shadow: 1px 1px #ff00ff;
+      }
+      75% {
+        transform: translate(-2px, 2px);
+        text-shadow: -2px 1px #00ffff;
+      }
+      100% {
+        transform: translate(2px, 2px);
+        text-shadow: -1px -1px #ff00ff;
+      }
+    }
+    @media screen and (min-width: 850px){
+    .Hacked {
+        width: 260px;
+        height: 300px;
+        display: inline-block;
+        background: url(//i.imgur.com/lYFsPHH.gif) no-repeat 50%/100%;
+        vertical-align: middle;
+        position: fixed;
+        left: 85.8%;
+        top: 55px;
+        z-index: 50;
+        cursor: pointer;
+        animation: hacker 1.2s ease-in-out 0s infinite alternate;
+        margin-left: -1px;
+        transform-origin: 50% 0;
+        pointer-events: none;
+    }
+    }
+    @keyframes hacker{
+      0% {
+        transform: rotate(10deg);
+    }
+      100%{
+                transform: rotate(-10deg);
+      }
+    }
     </style>
-</head>
-<body onload="__MinhTruongDev()">
-    <div>
-        <img class="MinhTruong_Avatar" src="https://dev.htpn.vn/upload/291215605_556554882669296_2531839889044700321_n.jpg" alt="MinhTruong Avatar">
-        <h2>Minh Truong <img height="17" src="https://files.catbox.moe/m436eg.gif" width="17" alt="icon"></h2>
-        <h4>From Minh Truong With Love <img height="17" src="https://dev.htpn.vn/upload/vuong-mien.webp" alt="icon" style="vertical-align: middle;" width="17"></h4>
-        <div class="buttons___">
-            <button class="facebook" onclick="window.open('https://www.facebook.com/minhtruong1812.dev', '_blank')">Facebook</button>
-            <button class="youtube" onclick="window.open('https://youtube.com/@minhletruong-m4b?si=bV4mAx45N0C0O9bC', '_blank')">Youtube</button>
-        </div>
-        <div class="Descriptions____">
-            <b style="font-size: 17px; color: rgb(201, 201, 201);">— Information Payment —</b>
-        </div>
-        <div class="cardsContainer__">
-            <div class="infoCard__">
-                <img src="https://i.imgur.com/1laJ21M.png" alt="VietinBank" height="60" width="60">
-                <u>VietinBank</u>
-                <p>Số Tài Khoản: <b>None</b></p>
-                <p>Chủ Tài Khoản: <b>LE MINH TRUONG</b></p>
+    <section id="main-container">
+    <div class="Hacked"></div>
+    <div class="marquee"><p>We are WusTeam Community - Hacker the network internet</p></div>
+      <div class="headertop filter-nothing" style="height: auto;">
+        <div id="banner_wave_1"></div>
+        <div id="banner_wave_2"></div>
+        <figure id="centerbg" class="centerbg" style="height: 100vh; background-image: url(//i.imgur.com/VINxVua.gif);">
+          <div class="focusinfo">
+            <div class="header-ws">
+                <img alt="avatar" class="avatar" loading="lazy" src="https://i.imgur.com/5HDPmyG.png">
             </div>
-            <div class="infoCard__">
-                <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="Momo" height="42" width="42">
-                <u>Momo Payment</u>
-                <p>Số Tài Khoản: <b>COMING SOON 30/4/2025</b></p>
-                <p>Chủ Tài Khoản: <b>LE MINH TRUONG</b></p>
+            <h1>Ws.ThanhDieu&nbsp;<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#00ff91"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16.78 9.7L11.11 15.37C10.97 15.51 10.78 15.59 10.58 15.59C10.38 15.59 10.19 15.51 10.05 15.37L7.22 12.54C6.93 12.25 6.93 11.77 7.22 11.48C7.51 11.19 7.99 11.19 8.28 11.48L10.58 13.78L15.72 8.64C16.01 8.35 16.49 8.35 16.78 8.64C17.07 8.93 17.07 9.4 16.78 9.7Z" fill="#00ff91"></path> </g></svg></h1>
+            <div class="header-container">
+              <div class="header-info">
+                <p>We are WusTeam Community<br>Website has been hacked</p>
+              </div>
             </div>
-            <div class="infoCard__">
-                <img src="https://i.imgur.com/3BHYldT.png" alt="Mb Bank" height="60" width="137">
-                <u>MB Bank</u>
-                <p>Số Tài Khoản: <b>COMING SOON 30/4/2025</b></p>
-                <p>Chủ Tài Khoản: <b>LE MINH TRUONG</b></p>
+            <div class="top-social">
+              <li id="bg-pre">
+                <img src="//i.imgur.com/y8zlvEj.png" loading="lazy">
+              </li>
+              <li id="bg-next">
+                <img loading="lazy" src="//i.imgur.com/AjFXb6G.png">
+              </li>
             </div>
+          </div>
+        </figure>
+        <div class="headertop-down">
+          <span>
+            <svg t="1682342753354" class="homepage-downicon" viewBox="0 0 1843 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" color="#00ff91" p-id="21355" width="80px" height="80px">
+              <path d="M1221.06136021 284.43250057a100.69380037 100.69380037 0 0 1 130.90169466 153.0543795l-352.4275638 302.08090944a100.69380037 100.69380037 0 0 1-130.90169467 0L516.20574044 437.48688007A100.69380037 100.69380037 0 0 1 647.10792676 284.43250057L934.08439763 530.52766665l286.97696258-246.09516608z" fill="rgba(255,255,255,0.8)" p-id="21356"></path>
+            </svg>
+          </span>
         </div>
-        <div class="__Footer__">
-            <span>All rights reserved — guns.lol/minhtruong07</span>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script>
-        function __MinhTruongDev() {
-            console.log("Trang web đã sẵn sàng.")
-      function copyText(textToCopy, type) {
-        // Tạo textarea để sao chép văn bản
-        var copyTextarea = document.createElement(&quot;textarea&quot;);
-        copyTextarea.textContent = textToCopy;
-        document.body.appendChild(copyTextarea);
-        copyTextarea.select();
-        document.execCommand(&#39;copy&#39;);
-        document.body.removeChild(copyTextarea);
-        
-        // Hiển thị thông báo sau khi sao chép
-        let message = &#39;&#39;;
-        if (type === &#39;stk&#39;) {
-            message = &#39;Đã sao chép số tài khoản vào bộ nhớ tạm&#39;;
-        } else if (type === &#39;chutaikhoan&#39;) {
-            message = &#39;Đã sao chép chủ tài khoản vào bộ nhớ tạm&#39;;
-        }
-        
-        Toastify({
-            text: message,
-            duration: 3000,
-            backgroundColor: &quot;green&quot;,
-            close: true
-        }).showToast();
-    }
-
-    // Gán sự kiện cho các phần tử có thuộc tính onclick chứa &#39;copyText&#39;
-    document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
-        document.querySelectorAll(&#39;span[onclick*=&quot;copyText&quot;]&#39;).forEach(function(span) {
-            span.addEventListener(&#39;click&#39;, function() {
-                // Tìm văn bản cần sao chép từ thuộc tính onclick
-                const stkMatch = this.textContent.match(/Số Tài Khoản: (.+)/);
-                const tenMatch = this.textContent.match(/Chủ Tài Khoản: (.+)/);
-                const textToCopy = stkMatch ? stkMatch[1] : tenMatch ? tenMatch[1] : '';
-                copyText(textToCopy, type);
-            });
-        });
-    });
-
-    // Hàm thông báo chung sử dụng SweetAlert
-    function __MinhTruongDev() {
-        thanhDieuNoto();
-    }
-
-    function minhtruongNoto() {
-        swal({
-            content: {
-                element: &quot;div&quot;,
-                attributes: {
-                    innerHTML: `
-                        <h2 class='text-danger'>Thông Tin Thanh Toán !</h2>
-                        <h5 class='text-warning'><strong>Copy số tài khoản 1 cách dễ dàng và nhanh chóng.</strong></h5>
-                    `,
-                },
-            },
-            buttons: {
-                confirm: {
-                    text: &quot;OK&quot;,
-                    className: &quot;swal-button swal-button--confirm&quot;,
-                },
-            },
-        });
-    }
-</script>
-<!-- Thay nhạc tại đây, thêm nhiều bài thì coppy ra  -->
-      <script>
-     const Wussun_Music = [
-    &quot;https://files.catbox.moe/65zbnr.mp3&quot;,
-    &quot;https://files.catbox.moe/v2gwor.mp3&quot;,
-];
-const musicTitles = [
-    &quot;Last Christmas&quot;,
-    &quot;Muộn rồi mà sao còn&quot;,
-]; // Thay thế bằng tên các bài nhạc thực tế của bạn
-
-let rand = Math.floor(Math.random() * Wussun_Music.length);
-const audio = new Audio(Wussun_Music[rand]);
-let popupDisplayed = false; // Biến trạng thái để theo dõi xem popup đã được hiển thị chưa
-
-function createPopup(message) {
-    const popup = document.createElement(&#39;div&#39;);
-    popup.style.position = &#39;fixed&#39;;
-    popup.style.top = &#39;10px&#39;;
-    popup.style.left = &#39;50%&#39;;
-    popup.style.transform = &#39;translateX(-50%)&#39;;
-    popup.style.background = &#39;green&#39;;
-    popup.style.color = &#39;#fff&#39;;
-    popup.style.padding = &#39;10px&#39;;
-    popup.style.borderRadius = &#39;5px&#39;;
-    popup.style.zIndex = &#39;1000&#39;;
-    popup.style.opacity = &#39;0&#39;;
-    popup.style.transition = 'opacity 0.5s ease-in-out';
-    popup.textContent = message;
-    document.body.appendChild(popup);
-
-    // Hiển thị và ẩn popup sau 2 giây
-    setTimeout(() =&gt; {
-        popup.style.opacity = &#39;1&#39;;
-        setTimeout(() =&gt; {
-            popup.style.opacity = &#39;0&#39;;
-            setTimeout(() =&gt; popup.remove(), 500); // Xóa popup sau khi ẩn
-        }, 2000);
-    }, 0);
-}
-
-function wussunplay() {
-    if (!popupDisplayed) { // Kiểm tra nếu popup chưa được hiển thị
-        audio.play();
-        createPopup(`Đang phát nhạc: ${musicTitles[rand] || &quot;Bài nhạc chưa có tên&quot;}`);
-        popupDisplayed = true; // Đánh dấu rằng popup đã được hiển thị
-    }
-}
-
-document.addEventListener(&quot;click&quot;, wussunplay);
-
-audio.addEventListener(&quot;ended&quot;, function() {
-    rand = (rand + 1) % Wussun_Music.length;
-    audio.src = Wussun_Music[rand];
-    audio.play();
-    popupDisplayed = false; // Đặt lại biến trạng thái khi bài nhạc kết thúc
-});
-</script>
-        <b:section id='honglin'/>
-    </body>
-    <!-- Kết thúc phần hiển thị -->
-</html>
+      </div>
+      <!-- #colophon -->
+    </section>
+    <audio controls="" autoplay="autoplay" loop="loop" style="display:none;">
+  <source src="//files.catbox.moe/nkyg7y.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html> 
