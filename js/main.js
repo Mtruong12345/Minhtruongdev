@@ -32,30 +32,6 @@ function firstQuestion(){
         $('.content').show(200);
       })
 }
-
-function loadCrushFiles() {
-    const fileListContainer = $('#file-list'); // Đảm bảo có một container HTML để hiển thị danh sách file
-    fileListContainer.html('<p>Đang tải danh sách file...</p>'); // Thông báo trong lúc tải
-
-    $.ajax({
-        url: '/api/get-crush-files', // Endpoint API phía server, bạn cần triển khai
-        method: 'GET',
-        success: function(files) {
-            fileListContainer.html(''); // Xóa nội dung cũ
-            files.forEach(file => {
-                fileListContainer.append(`
-                    <a href="/crush/${file}" target="_blank" class="file-item">
-                        ${file}
-                    </a>
-                `); // Hiển thị từng file dưới dạng liên kết
-            });
-        },
-        error: function() {
-            fileListContainer.html('<p>Không thể tải danh sách file.</p>');
-        }
-    });
-}
-
  // switch button position
  function switchButton() {
     var audio = new Audio('sound/duck.mp3');
