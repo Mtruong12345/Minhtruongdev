@@ -12,4 +12,5 @@ const CONFIG = {
     mess: 'Anh biết mà 🥰. Yêu em nhiều nhiều 😘😘',
     messDesc: 'Tối nay call discord xem phim nhen công chúa💗.',
     btnAccept: 'Okiiiii lun <3',
+    messLink: 'https://m.me/minhtruong1812.dev'
 }
